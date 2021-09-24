@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style Lang="SCSS" scoped>
+<style lang="scss" scoped>
 @import "../style/variables.scss";
 
 
