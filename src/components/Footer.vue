@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
+<style Lang="SCSS" scoped>
+@import "../style/variables.scss";
+
 
 </style>
