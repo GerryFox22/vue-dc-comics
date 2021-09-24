@@ -1,6 +1,6 @@
 <template>
   <header id="header">
-      <img src="../assets/img/dc-logo.png" alt="DC Logo">
+      <img :src="'./img/dc-logo.png'" alt="DC Logo">
       <nav>
           <ul>
               <li v-for="(link, index) in links" :key="index" :class="{ active : link.current }">

@@ -9,7 +9,7 @@
         <div class="bg-info-container">
             <div class="info-container">
                 <div v-for="(info, index) in informations" :key="index" class="single-info">
-                    <img :src="info.src" alt="">
+                    <img :src="info.src" :alt="info.alt">
                     <p>{{ info.text }}</p>
                 </div>
                 
@@ -29,27 +29,32 @@ export default {
             informations : [
                 {
                     text : "DIGITAL COMICS",
-                    src : "../assets/img/buy-comics-digital-comics.png",
+                    src : "./img/buy-comics-digital-comics.png",
+                    alt : "DIGITAL COMICS IMG"
 
                 },
                 {
                     text : "DC MERCHANDISE",
-                    src : "../assets/img/buy-comics-merchandise.png",
+                    src : "./img/buy-comics-merchandise.png",
+                    alt : "DC MERCHANDISE IMG"
 
                 },
                 {
                     text : "SUBSCRIPTION",
-                    src : "../assets/img/buy-comics-subscriptions.png",
+                    src : "./img/buy-comics-subscriptions.png",
+                    alt : "SUBSCRIPTION IMG"
 
                 },
                 {
                     text : "COMIC SHOP LOCATOR",
-                    src : "../assets/img/buy-comics-shop-locator.png",
+                    src : "./img/buy-comics-shop-locator.png",
+                    alt : "COMIC SHOP LOCATOR IMG"
 
                 },
                 {
                     text : "DC POWER VISA",
-                    src : "../assets/img/buy-dc-power-visa.svg",
+                    src : "./img/buy-dc-power-visa.svg",
+                    alt : "DC POWER VISA IMG"
                 },
               
                 
@@ -84,6 +89,7 @@ main {
 
 .info-container {
     display: flex;
+    justify-content: space-around;
 }
 
 .bg-info-container {
@@ -93,7 +99,8 @@ main {
 .single-info {
     display: flex;
     align-items: center;
-    padding: 35px;
+    padding: 20px 0;
+ 
 }
 
 .single-info p {
