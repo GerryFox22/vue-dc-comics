@@ -85,8 +85,10 @@ export default {
 
 header {
     display: flex;
-    justify-content: space-around;
-    margin: 25px 0;
+    justify-content: space-between;
+    padding: 25px 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 img{
@@ -95,6 +97,7 @@ img{
 
 ul {
     display: flex;
+    padding: 0;
     margin: 0;
     align-items: center;
     height: 100%;
