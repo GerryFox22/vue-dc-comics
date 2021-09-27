@@ -1,9 +1,19 @@
 <template>
   <main>
-        <div class="content-container">
-            <div class="content">
-              <h4>--- Content goes here ---</h4>
-          </div>
+        <div class="jumbo">
+            <img src="../assets/jumbotron.jpg" alt="">
+            <div class="jumbo-elements">
+                <h2>CURRENT SERIES</h2>
+
+                <div class="comics-cards-container">
+                   <Card v-for="(card,index) in dcComics" :key="index" :image="card.thumb" :price="card.price" :series="card.series" :type="card-type" />
+                </div>
+
+                <div class="load-button-container">
+                    <button class="load-button">LOAD MORE</button>
+                </div>
+                    
+            </div>
         </div>
           
         <div class="bg-info-container">
@@ -20,8 +30,16 @@
 </template>
 
 <script>
+
+import dcComics from "../data/dc-comics.js"
+import Card from "../components/card.vue"
+
 export default {
     name: "Main",
+
+    components: {
+    Card,
+  },
 
     data: function() {
         return {
@@ -56,10 +74,8 @@ export default {
                     src : "./img/buy-dc-power-visa.svg",
                     alt : "DC POWER VISA IMG"
                 },
-              
-                
-
             ],
+            dcComics,
         }
     },
     methods: {
@@ -75,10 +91,48 @@ main {
     background-color: black;
 }
 
+.jumbo {
+    background-color: black;
+    img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
 
-.content-container {
+
+.jumbo-elements {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 20px;
+    h2 {
+        color: $whiteText ;
+        margin: 0;
+        background-color: #0282F9;
+        width: 17%;
+        padding: 20px;
+        font-size: 1.3rem;
+    }
+    button {
+        background-color: #0282F9;
+        color: $whiteText ;
+        width: 15%;
+        padding: 5px 0;
+        cursor: pointer;
+        
+    }
+}
+
+.load-button-container {
+    text-align: center;
+}
+
+.comics-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .main-container,
